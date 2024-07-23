@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="light class=" scroll-smooth"">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body onload="startTime()" class="bg-orange ">
+
+    <h1 class="counter z-20	fixed text-orange text-[250px] w-screen h-screen flex justify-start items-end p-4">0</h1>
+    <div class="overlay fixed w-screen h-screen	z-10 grid grid-cols-10">
+        <div class="bar grid-cols-1 bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+        <div class="bar grid-cols-1	bg-white"></div>
+    </div>
+
+    <main class="mx-6 2xl:mx-16">
+        <header class="sticky top-0 bg-transparent backdrop-blur-sm grid grid-cols-12 gap-2 h-12">
+            <div
+                class="text-white font-extralight font-body flex justify-between  items-center text-base col-span-12 md:col-span-10">
+                <div class="flex items-center justify-center gap-1">
+                    <img class="w-5" src="../src/assets/favicon.svg" alt="logo icon">
+                    <span>Natan Yago</span>
+                </div>
+
+                <span>Menu</span>
+
+            </div>
+            <div class="hidden col-span-0  justify-end  items-center md:col-span-2 md:flex">
+                <div class="text-white" id="clock"></div>
+
+            </div>
+        </header>
+
+        <section class="sticky top-[3rem]  grid grid-cols-12 gap-2">
+            <div class="header-line col-span-12 md:col-span-10"
+                style="border: 1px solid rgba(255, 255, 255, 0.363); border-radius: 0.25rem; height: 1.2rem; mask-image: linear-gradient(#000 50%, transparent 0);">
+            </div>
+            <div class="hidden col-span-0 md:col-span-2 md:block">
+                <div
+                    class="border border-lightBorder backdrop-blur-sm rounded-lg p-2 mb-2 text-white font-light font-body flex justify-start items-center gap-3">
+                    <div class="bg-white inline-block p-1 rounded-sm self-start">
+                        <svg class="fill-orange w-[20px] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            <path fill-rule="evenodd"
+                                d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm">My Work</p>
+                        <p class="text-xs">See all of my work</p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="border border-lightBorder backdrop-blur-sm rounded-lg p-2 text-white font-light font-body flex justify-start items-center gap-3 sticky top-[7rem]">
+                    <div class="bg-white inline-block p-1 rounded-sm self-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="fill-orange w-[20px] ">
+                            <path fill-rule="evenodd"
+                                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm">Contact</p>
+                        <p class="text-xs">Available for work</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-12 gap-2 ">
+            <div class="main-col col-span-12 md:col-span-10">
+                <h1 class="text-9xl text-white font-bold ">Hey,<br>I'm Natan,<br>a Web Developer<br>from Tel Aviv
+                </h1>
+            </div>
+
+            <div class="widget-col hidden col-span-0 md:col-span-2 md:block">
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-12 gap-2 pt-10 pb-28">
+            <div class="main-col col-span-12 md:col-span-10">
+                <h2 class="text-4xl text-white font-light font-body">Experience in advanced web frameworks and
+                    server-side
+                    Programming.
+                    Managing, designing, and building A kick-butt website for clients using several platforms with a
+                    focus
+                    on CRO.</h2>
+            </div>
+
+            <div class="widget-col hidden col-span-0 md:col-span-2 md:block">
+
+
+            </div>
+        </section>
+
+
+        <section class="h-[1000px]">
+            <h1 class="text-4xl text-white font-extralight pb-4">E-Commerce</h1>
+            <h1 class="text-4xl text-white font-extralight pb-4">Websites</h1>
+            <h1 class="text-4xl text-white font-extralight pb-4">Visual Identities</h1>
+            <h1 class="text-4xl text-white font-extralight ">Fron end Development</h1>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./gsap.min.js"></script>
+    <script src="./animations.js"></script>
+    <script src="./script.js"></script>
+</body>
