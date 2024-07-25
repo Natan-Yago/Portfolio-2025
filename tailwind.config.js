@@ -5,6 +5,13 @@ module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
       colors: {
+        'background': 'rgba(var(--background))',
+        'borderColor': 'rgba(var(--borderColor))',
+        'copyPrimary': 'rgba(var(--copyPrimary))',
+        'copySecondary': 'rgba(var(--copySecondary))',
+
+
+
         'lightBackground': '#f8fafc',
         'lightBorder': '#ffffff54',
         'lightTitle': '#020617',

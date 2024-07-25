@@ -13,3 +13,17 @@ function startTime() {
     setTimeout(startTime, 1000);
   }
   
+
+
+  window.addEventListener('scroll', function() {  
+    let scrollPosition = window.scrollY;  
+    let bodyElement = document.body;  
+
+    if (scrollPosition < document.documentElement.scrollHeight * 0.3) {  
+      bodyElement.className = 'light';  
+    } else if (scrollPosition >= document.documentElement.scrollHeight * 0.3 && scrollPosition <= document.documentElement.scrollHeight * 0.7) {  
+      bodyElement.className = 'orange';  
+    } else {  
+      bodyElement.className = 'dark';  
+    }  
+  });  

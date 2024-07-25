@@ -707,6 +707,10 @@ video {
   align-self: flex-start;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .scroll-smooth{
   scroll-behavior: smooth;
 }
@@ -723,22 +727,24 @@ video {
   border-width: 1px;
 }
 
-.border-lightBorder{
-  border-color: #ffffff54;
+.border-borderColor{
+  border-color: rgba(var(--borderColor));
 }
 
-.bg-orange{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 60 0 / var(--tw-bg-opacity));
+.bg-background{
+  background-color: rgba(var(--background));
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+.bg-copyPrimary{
+  background-color: rgba(var(--copyPrimary));
 }
 
-.fill-orange{
-  fill: #FF3C00;
+.fill-background{
+  fill: rgba(var(--background));
+}
+
+.fill-copyPrimary{
+  fill: rgba(var(--copyPrimary));
 }
 
 .p-1{
@@ -774,8 +780,8 @@ video {
   line-height: 2.5rem;
 }
 
-.text-9xl{
-  font-size: 8rem;
+.text-8xl{
+  font-size: 6rem;
   line-height: 1;
 }
 
@@ -810,14 +816,12 @@ video {
   font-weight: 300;
 }
 
-.text-orange{
-  --tw-text-opacity: 1;
-  color: rgb(255 60 0 / var(--tw-text-opacity));
+.text-background{
+  color: rgba(var(--background));
 }
 
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.text-copyPrimary{
+  color: rgba(var(--copyPrimary));
 }
 
 .backdrop-blur-sm{
@@ -826,20 +830,26 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-/* 
 .light{
-    --background: hsl(30, 40%, 98%);
-    --border: hsl(213, 27%, 84%);
-    --title: hsl(229, 84%, 58%);
-    --bodyText: hsl(215, 20%, 65%);
+  --background: 239, 231, 215;
+  --borderColor: 255, 60, 0, 0.4;
+  --copyPrimary: 255, 60, 0;
+  --copySecondary: 143, 143, 143;
 }
 
 .dark{
-    --background: hsl(217, 33%, 17%);
-    --border: hsl(215, 25%, 27%);
-    --title: 	hsl(210, 40%, 98%);
-    --bodyText: hsl(215, 20%, 65%);
-} */
+  --background: 8, 8, 8;
+  --borderColor: 255, 255, 255;
+  --copyPrimary: 	255, 255, 255;
+  --copySecondary: 128, 128, 128;
+}
+
+.orange{
+  --background: 255, 60, 0;
+  --borderColor: 255, 255, 255, 0.5;
+  --copyPrimary: 	239, 231, 215;
+  --copySecondary: 239, 231, 215;
+}
 
 @media (min-width: 768px){
   .md\:col-span-10{
@@ -865,4 +875,5 @@ video {
     margin-right: 4rem;
   }
 }
+
 

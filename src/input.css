@@ -4,18 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
+
 .light{
-    --background: hsl(30, 40%, 98%);
-    --border: hsl(213, 27%, 84%);
-    --title: hsl(229, 84%, 58%);
-    --bodyText: hsl(215, 20%, 65%);
+    --background: 239, 231, 215;
+    --borderColor: 255, 60, 0, 0.4;
+    --copyPrimary: 255, 60, 0;
+    --copySecondary: 143, 143, 143;
 }
 
 .dark{
-    --background: hsl(217, 33%, 17%);
-    --border: hsl(215, 25%, 27%);
-    --title: 	hsl(210, 40%, 98%);
-    --bodyText: hsl(215, 20%, 65%);
-} */
+    --background: 8, 8, 8;
+    --borderColor: 255, 255, 255;
+    --copyPrimary: 	255, 255, 255;
+    --copySecondary: 128, 128, 128;
+} 
+
+.orange{
+    --background: 255, 60, 0;
+    --borderColor: 255, 255, 255, 0.5;
+    --copyPrimary: 	239, 231, 215;
+    --copySecondary: 239, 231, 215;
+}
+
 
