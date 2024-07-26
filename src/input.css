@@ -14,9 +14,9 @@
 
 .dark{
     --background: 8, 8, 8;
-    --borderColor: 255, 255, 255;
-    --copyPrimary: 	255, 255, 255;
-    --copySecondary: 128, 128, 128;
+    --borderColor: 255, 255, 255, 0.2;
+    --copyPrimary: 	239, 231, 215;
+    --copySecondary: 239, 231, 215;
 } 
 
 .orange{

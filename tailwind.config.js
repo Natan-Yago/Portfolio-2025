@@ -4,6 +4,15 @@ module.exports = {
   mode: 'jit',
   content: ["./dist/*.{html,js}"],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
       colors: {
         'background': 'rgba(var(--background))',
         'borderColor': 'rgba(var(--borderColor))',
