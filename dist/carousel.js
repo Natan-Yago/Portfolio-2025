@@ -1,43 +1,4 @@
 
-// document.addEventListener("DOMContentLoaded", function() {  
-//   var body = document.body;  
-
-//   window.addEventListener("scroll", function() {  
-//       var scroll = window.scrollY;  
-
-//       if (scroll >= 500) {  
-//           body.classList.remove('orange');  
-//           body.classList.add('dark'); // Add the dark class for scroll beyond 500px  
-//       } else if (scroll >= 200) {  
-//           body.classList.remove('light');  
-//           body.classList.add('orange'); // Add the orange class for scroll between 200px and 500px  
-//       } else {  
-//           body.classList.remove('dark', 'orange'); // Remove dark and orange classes  
-//           body.classList.add('light'); // Add the light class when scrolling back to top  
-//       }  
-//   });  
-// });  
-
-
-
-document.addEventListener("DOMContentLoaded", function() {  
-  var body = document.body;  
-
-  window.addEventListener("scroll", function() {  
-      var scroll = window.scrollY;  
-
-      if (scroll >= 1200) {  
-          body.classList.remove('orange', 'light');  
-          body.classList.add('dark'); // Add the dark class for scroll beyond 500px  
-      } else if (scroll >= 100) {  
-          body.classList.remove('orange', 'dark');  
-          body.classList.add('light'); // Add the orange class for scroll between 200px and 500px  
-      } else {  
-          body.classList.remove('dark', 'light'); // Remove dark and orange classes  
-          body.classList.add('orange'); // Add the light class when scrolling back to top  
-      }  
-  });  
-});  
 // ======SLIDER ANIMATION===============================================================================
 const wrapper = document.querySelector(".wrapper");
 const boxes = gsap.utils.toArray(".box");
@@ -46,7 +7,7 @@ const boxes = gsap.utils.toArray(".box");
 
 const loop = horizontalLoop(boxes, {paused: true, paddingRight: 4, draggable: true});
 
-// boxes.forEach((box, i) => box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
+boxes.forEach((box, i) => box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
 
 document.querySelector(".next").addEventListener("click", () => loop.next({duration: 0.4, ease: "power1.inOut"}));
 document.querySelector(".prev").addEventListener("click", () => loop.previous({duration: 0.4, ease: "power1.inOut"}));
@@ -243,58 +204,61 @@ function horizontalLoop(items, config) {
 	onChange && onChange(items[curIndex], curIndex);
 	return tl;
 }
+
+
+
 // =====================================================================================================
 // ======LOADER ANIMATION===============================================================================
-function startLoader() {
-  let counterelement = document.querySelector(".counter");
-  let currentValue = 0;
 
-  function updateCounter() {
-      if (currentValue === 100) {
-          return
-      }
-      currentValue += Math.floor(Math.random() * 10) + 3;
+// function startLoader() {
+//   let counterelement = document.querySelector(".counter");
+//   let currentValue = 0;
 
-      if (currentValue > 100) {
-          currentValue = 100;
-      }
-      counterelement.textContent = currentValue;
-      let delay = Math.floor(Math.random() * 200) + 50;
+//   function updateCounter() {
+//       if (currentValue === 100) {
+//           return
+//       }
+//       currentValue += Math.floor(Math.random() * 10) + 3;
 
-      setTimeout(updateCounter, delay);
-  }
+//       if (currentValue > 100) {
+//           currentValue = 100;
+//       }
+//       counterelement.textContent = currentValue;
+//       let delay = Math.floor(Math.random() * 200) + 50;
 
-  updateCounter();
-}
+//       setTimeout(updateCounter, delay);
+//   }
 
-startLoader();
+//   updateCounter();
+// }
 
-
-gsap.to(".counter", 0.25, {
-  delay: 3,
-  opacity: 0,
-})
+// startLoader();
 
 
-gsap.to(".bar", 1.5, {
-  delay: 3,
-  height: 0,
-  stagger: {
-      amount: 0.5,
-  },
-  ease: "power4.inOut",
-})
+// gsap.to(".counter", 0.25, {
+//   delay: 3,
+//   opacity: 0,
+// })
+
+
+// gsap.to(".bar", 1.5, {
+//   delay: 3,
+//   height: 0,
+//   stagger: {
+//       amount: 0.5,
+//   },
+//   ease: "power4.inOut",
+// })
   
   
-  document.addEventListener("DOMContentLoaded", (event) => {
-   const tl = gsap.timeline({ defaults: { duration: 1 } });
-   // Manually adding each element with specific delays or settings
-   tl.from(".gsap-tl-1", { opacity: 0, y: 50, duration: 0.5 })
-     .from(".gsap-tl-2", { opacity: 0, y: 50, duration: 0.5 }, "+=0") // Start 0.2 seconds after the previous animation
-    gsap.from(".revel", { opacity: 0, y: 100, duration: 1 });
+//   document.addEventListener("DOMContentLoaded", (event) => {
+//    const tl = gsap.timeline({ defaults: { duration: 1 } });
+//    // Manually adding each element with specific delays or settings
+//    tl.from(".gsap-tl-1", { opacity: 0, y: 50, duration: 0.5 })
+//      .from(".gsap-tl-2", { opacity: 0, y: 50, duration: 0.5 }, "+=0") // Start 0.2 seconds after the previous animation
+//     gsap.from(".revel", { opacity: 0, y: 100, duration: 1 });
 
-   });
-
+//    });
 
 
 

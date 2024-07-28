@@ -642,6 +642,10 @@ video {
   z-index: 30;
 }
 
+.z-40{
+  z-index: 40;
+}
+
 .col-span-12{
   grid-column: span 12 / span 12;
 }
@@ -775,10 +779,6 @@ video {
   overflow: hidden;
 }
 
-.scroll-smooth{
-  scroll-behavior: smooth;
-}
-
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -821,11 +821,6 @@ video {
 
 .p-4{
   padding: 1rem;
-}
-
-.py-28{
-  padding-top: 7rem;
-  padding-bottom: 7rem;
 }
 
 .pb-28{
@@ -910,8 +905,12 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-700{
-  transition-duration: 700ms;
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.ease-in{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .light{
@@ -935,9 +934,35 @@ video {
   --copySecondary: 239, 231, 215;
 }
 
+.blue{
+  --background: 0, 77, 179;
+  --borderColor: 213, 231, 255;
+  --copyPrimary: 	255, 255, 255;
+  --copySecondary: 255, 255, 255;
+}
+
+.after\:border::after{
+  content: var(--tw-content);
+  border-width: 1px;
+}
+
+.after\:border-solid::after{
+  content: var(--tw-content);
+  border-style: solid;
+}
+
+.after\:border-copyPrimary::after{
+  content: var(--tw-content);
+  border-color: rgba(var(--copyPrimary));
+}
+
 @media (min-width: 768px){
   .md\:col-span-10{
     grid-column: span 10 / span 10;
+  }
+
+  .md\:col-span-12{
+    grid-column: span 12 / span 12;
   }
 
   .md\:col-span-2{
@@ -972,6 +997,10 @@ video {
   .md\:text-8xl{
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .md\:text-\[10rem\]{
+    font-size: 10rem;
   }
 }
 

@@ -19,6 +19,9 @@ module.exports = {
         'copyPrimary': 'rgba(var(--copyPrimary))',
         'copySecondary': 'rgba(var(--copySecondary))',
 
+        'black': "#000000",
+        'white': "#ffffff",
+        'orange': "#FF3C00",
 
 
         'lightBackground': '#f8fafc',
@@ -30,10 +33,7 @@ module.exports = {
         'darkBorder': '#374151',
         'darkTitle': '#f8fafc',
         'lightBody': '#6b7280',
-        
-        'black': "#000000",
-        'white': "#ffffff",
-        'orange': "#FF3C00",
+
       },
     fontFamily: {
       'sans': ['Inter'],

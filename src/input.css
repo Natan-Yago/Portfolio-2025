@@ -26,4 +26,11 @@
     --copySecondary: 239, 231, 215;
 }
 
+.blue{
+    --background: 0, 77, 179;
+    --borderColor: 213, 231, 255;
+    --copyPrimary: 	255, 255, 255;
+    --copySecondary: 255, 255, 255;
+}
+
 
