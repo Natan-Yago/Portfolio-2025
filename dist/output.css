@@ -831,6 +831,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-\[20rem\]{
+  padding-bottom: 20rem;
+}
+
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -941,6 +945,13 @@ video {
   --copySecondary: 255, 255, 255;
 }
 
+.green{
+  --background: 0, 164, 95;
+  --borderColor: 213, 231, 255;
+  --copyPrimary: 	255, 255, 255;
+  --copySecondary: 255, 255, 255;
+}
+
 .after\:border::after{
   content: var(--tw-content);
   border-width: 1px;
@@ -994,8 +1005,8 @@ video {
     line-height: 2.25rem;
   }
 
-  .md\:text-8xl{
-    font-size: 6rem;
+  .md\:text-9xl{
+    font-size: 8rem;
     line-height: 1;
   }
 
@@ -1010,5 +1021,3 @@ video {
     margin-right: 4rem;
   }
 }
-
-
